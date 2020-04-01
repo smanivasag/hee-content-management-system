@@ -2,7 +2,7 @@ name: Continuous Deployment to Dev Env. [CD]
 
 on:
   push:
-    branches: [ develop ]
+    branches: [develop]
 
 jobs:
   deploy:
@@ -45,7 +45,7 @@ jobs:
         run: mvn -B clean test -Pdefault --file pom.xml
 
       - name: Package
-        run: mvn -B verify && mvn -P dist-with-development-data --file pom.xml
+        run: mvn -B verify && mvn -P dist --file pom.xml
 
       - name: Install Deployment Script dependencies
         run: cd $GITHUB_WORKSPACE/.github/workflows/scripts/bloomreach-deployment; npm install

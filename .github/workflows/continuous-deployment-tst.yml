@@ -2,7 +2,7 @@ name: Continuous Deployment to Test Env. [CD]
 
 on:
   push:
-    branches: [ 'releases/**' ]
+    branches: ['releases/**']
 
 jobs:
   deploy:
