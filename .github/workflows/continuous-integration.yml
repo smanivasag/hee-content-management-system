@@ -1,5 +1,6 @@
 name: Continuous Integration [CI]
 
+# Continuous Integration on develop & release/** branches will be done part of Continuous Deployment workflow
 on:
   push:
     branches-ignore:
