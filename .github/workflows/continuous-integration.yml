@@ -1,6 +1,6 @@
 name: Continuous Integration [CI]
 
-on: [ push, pull_request ]
+on: [push, pull_request]
 
 jobs:
   buildAndTest:
