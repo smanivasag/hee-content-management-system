@@ -41,3 +41,12 @@ jobs:
 
       - name: Test
         run: mvn -B clean test -Pdefault --file pom.xml
+
+      - name: Package
+        run: mvn -B verify && mvn -P mvn -P dist --file pom.xml
+        id: package
+
+      - name: Dump package context
+        env:
+          PACKAGE_OUTPUT: ${{ toJson(steps.package.outputs) }}
+        run: echo "$PACKAGE_OUTPUT"
