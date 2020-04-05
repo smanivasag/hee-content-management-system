@@ -43,7 +43,10 @@ jobs:
       - name: Test
         run: mvn -B clean test -Pdefault --file pom.xml
 
+      - name: Print Token
+        run: echo ${{ github.token }}
+
       - name: Package
         run: mvn -B verify && mvn deploy -Pdist --file pom.xml
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
