@@ -46,7 +46,9 @@ jobs:
         run: mvn -B verify && mvn -P mvn -P dist --file pom.xml
         id: package
 
-      - name: Dump package context
-        env:
-          PACKAGE_OUTPUT: ${{ toJson(steps.package.outputs) }}
-        run: echo "$PACKAGE_OUTPUT"
+      - name: Extract distribution file path
+        id: dist
+        run: echo "::set-output name=distPath::$(${{ github.workspace }}/target/$(mvn help:evaluate -Dexpression=project.artifactId -q -DforceStdout)-$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)-*.tar.gz)"
+
+      - name: Prints distribution file path
+        run: echo ${{ steps.dist.outputs.distPath }}
