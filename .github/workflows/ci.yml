@@ -42,3 +42,6 @@ jobs:
 
       - name: Test
         run: mvn -B clean test -Pdefault --file pom.xml
+
+      - name: Package
+        run: mvn -B verify && mvn deploy -P dist --file pom.xml
