@@ -48,12 +48,12 @@
     <repository>
       <id>github</id>
       <name>GitHub Manifesto-Digital Apache Maven Packages</name>
-      <url>https://maven.pkg.github.com/Manifesto-Digital/hee-content-management-system</url>
+      <url>https://maven.pkg.github.com/smanivasag/hee-content-management-system</url>
     </repository>
     <snapshotRepository>
       <id>github</id>
       <name>GitHub Manifesto-Digital Apache Maven Packages</name>
-      <url>https://maven.pkg.github.com/Manifesto-Digital/hee-content-management-system</url>
+      <url>https://maven.pkg.github.com/smanivasag/hee-content-management-system</url>
     </snapshotRepository>
   </distributionManagement>
   <!-- End of emptied/overridden metadata from parent hippo-cms7-release pom. -->
