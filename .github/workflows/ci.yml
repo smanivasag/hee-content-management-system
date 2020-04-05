@@ -43,11 +43,8 @@ jobs:
       - name: Test
         run: mvn -B clean test -Pdefault --file pom.xml
 
-      - name: Print Token
-        run: echo ${{ github.token }}
-
       - name: Package
-        run: mvn -B verify && mvn deploy -Pdist --file pom.xml
-        env:
-          # GITHUB_TOKEN: ${{ github.token }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: mvn -B verify && mvn deploy -Pdist --file pom.xml -Dregistry=https://maven.pkg.github.com/Manifesto-Digital -Dtoken=$GH_TOKEN
+        # env:
+        #   # GITHUB_TOKEN: ${{ github.token }}
+        #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
