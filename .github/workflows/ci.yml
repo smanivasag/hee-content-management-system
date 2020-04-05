@@ -26,9 +26,9 @@ jobs:
       - name: Configure maven settings
         uses: whelk-io/maven-settings-xml-action@v4
         with:
-          repositories: '[{ "id": "hippo-maven2-enterprise", "url": "https://maven.onehippo.com/maven2-enterprise/" }]'
+          repositories: '[{ "id": "hippo-maven2-enterprise", "url": "https://maven.onehippo.com/maven2-enterprise/" }, { "id": "github", "url": "https://maven.pkg.github.com/Manifesto-Digital/hee-content-management-system" }]'
           plugin_repositories: '[{ "id": "hippo-maven2-enterprise", "url": "https://maven.onehippo.com/maven2-enterprise/" }]'
-          servers: '[{ "id": "hippo-maven2-enterprise", "username": "${{ secrets.BLOOMREACH_MVN_USERNAME }}", "password": "${{ secrets.BLOOMREACH_MVN_PASSWORD }}" }]'
+          servers: '[{ "id": "hippo-maven2-enterprise", "username": "${{ secrets.BLOOMREACH_MVN_USERNAME }}", "password": "${{ secrets.BLOOMREACH_MVN_PASSWORD }}" }, { "id": "github", "url": "https://maven.pkg.github.com/Manifesto-Digital/hee-content-management-system" }]'
 
       - name: Cache maven packages
         uses: actions/cache@v1
