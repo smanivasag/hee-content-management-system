@@ -44,4 +44,4 @@ jobs:
         run: mvn -B clean test -Pdefault --file pom.xml
 
       - name: Package
-        run: mvn -B verify && mvn deploy -Pdist --file pom.xml -Dregistry=https://maven.pkg.github.com/Manifesto-Digital -Dtoken=$GH_TOKEN
+        run: mvn -B verify && mvn deploy -Pdist --file pom.xml
