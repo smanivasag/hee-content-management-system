@@ -4,9 +4,9 @@ The HEE content management and delivery system used to manage and deliver the we
 
 ## Continuous Integration/Continuous Deployment Status (CI/CD)
 
-![](https://github.com/Manifesto-Digital/hee-content-management-system/workflows/Continuous%20Integration%20%5BCI%5D/badge.svg)
-![](https://github.com/Manifesto-Digital/hee-content-management-system/workflows/Continuous%20Deployment%20to%20Dev%20Env.%20%5BCD%5D/badge.svg)
-![](https://github.com/Manifesto-Digital/hee-content-management-system/workflows/Continuous%20Deployment%20to%20Test%20Env.%20%5BCD%5D/badge.svg)
+![](https://github.com/smanivasag/hee-content-management-system/workflows/CI/badge.svg)
+![](https://github.com/smanivasag/hee-content-management-system/workflows/CI%20%26%20CD%20%5BDEV%5D/badge.svg)
+![](https://github.com/smanivasag/hee-content-management-system/workflows/CI%20%26%20CD%20%5BTEST%5D/badge.svg)
 
 ## Built With
 
@@ -34,7 +34,7 @@ In order to get a development environment up and running you will need to work t
 Cloning the platform from source control
 
 ```
-git clone https://github.com/Manifesto-Digital/hee-content-management-system.git
+git clone https://github.com/smanivasag/hee-content-management-system.git
 ```
 
 To run the brXM project in a docker container, you must install the project, build the docker image and run the docker image respectively.
@@ -155,7 +155,7 @@ TODO: Add additional notes about how to deploy this on a live system
 
 ## Releases and Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the releases available, see the [Releases/Tags on this repository](https://github.com/Manifesto-Digital/hee-content-management-system/releases).
+We use [SemVer](http://semver.org/) for versioning. For the releases available, see the [Releases/Tags on this repository](https://github.com/smanivasag/hee-content-management-system/releases).
 
 ## Authors
 
