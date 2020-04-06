@@ -39,12 +39,12 @@ jobs:
       - name: cat maven settings.xml file 2
         run: cat ~/.m2/settings.xml
 
-      - name: Cache maven packages
-        uses: actions/cache@v1
-        with:
-          path: ~/.m2
-          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ runner.os }}-m2
+      # - name: Cache maven packages
+      #   uses: actions/cache@v1
+      #   with:
+      #     path: ~/.m2
+      #     key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+      #     restore-keys: ${{ runner.os }}-m2
 
       - name: prints effective-settings 3
         run: mvn -B help:effective-settings
