@@ -46,6 +46,6 @@ jobs:
       - name: Package
         run: mvn -B verify && mvn deploy -Pdist --file pom.xml -X
         env:
+          GITHUB_ACTOR: smanivasag
           GITHUB_TOKEN: ${{ github.token }}
-          # GITHUB_ACTOR: smanivasag
           # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
