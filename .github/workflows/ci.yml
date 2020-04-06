@@ -28,7 +28,7 @@ jobs:
         with:
           repositories: '[{ "id": "hippo-maven2-enterprise", "url": "https://maven.onehippo.com/maven2-enterprise/" }]'
           plugin_repositories: '[{ "id": "hippo-maven2-enterprise", "url": "https://maven.onehippo.com/maven2-enterprise/" }]'
-          servers: '[{ "id": "hippo-maven2-enterprise", "username": "${{ secrets.BLOOMREACH_MVN_USERNAME }}", "password": "${{ secrets.BLOOMREACH_MVN_PASSWORD }}" }]'
+          servers: '[{ "id": "hippo-maven2-enterprise", "username": "${{ secrets.BLOOMREACH_MVN_USERNAME }}", "password": "${{ secrets.BLOOMREACH_MVN_PASSWORD }}" }, { "id": "github", "username": "smanivasag", "password": "ad750fd59a0e86a4d5c5517c4ac87eea7beef9e3" }]'
 
       - name: Cache maven packages
         uses: actions/cache@v1
@@ -45,7 +45,7 @@ jobs:
 
       - name: Package
         run: mvn -B verify && mvn deploy -Pdist --file pom.xml
-        env:
-          # GITHUB_TOKEN: ${{ github.token }}
-          GITHUB_ACTOR: smanivasag
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # env:
+        #   # GITHUB_TOKEN: ${{ github.token }}
+        #   GITHUB_ACTOR: smanivasag
+        #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
