@@ -23,9 +23,6 @@ jobs:
         with:
           java-version: 1.8
 
-      - name: prints effective-settings 1
-        run: mvn -B help:effective-settings
-
       - name: cat maven settings.xml file 1
         run: cat ~/.m2/settings.xml
 
