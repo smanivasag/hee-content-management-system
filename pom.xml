@@ -421,8 +421,8 @@
                   <finalName>${project.artifactId}-${project.version}-${git.commit.id.describe}</finalName>
                   <descriptors>
                     <descriptor>${project.basedir}/src/main/assembly/distribution.xml</descriptor>
-                    <appendAssemblyId>false</appendAssemblyId>
                   </descriptors>
+                  <appendAssemblyId>false</appendAssemblyId>
                 </configuration>
               </execution>
             </executions>
