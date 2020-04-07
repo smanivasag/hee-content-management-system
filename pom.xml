@@ -12,7 +12,7 @@
   <description>HEE Web</description>
   <groupId>uk.nhs.hee.web</groupId>
   <artifactId>hee-web</artifactId>
-  <version>0.1.0-SNAPSHOT</version>
+  <version>0.1.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <!--
@@ -421,6 +421,7 @@
                   <finalName>${project.artifactId}-${project.version}-${git.commit.id.describe}</finalName>
                   <descriptors>
                     <descriptor>${project.basedir}/src/main/assembly/distribution.xml</descriptor>
+                    <appendAssemblyId>false</appendAssemblyId>
                   </descriptors>
                 </configuration>
               </execution>
