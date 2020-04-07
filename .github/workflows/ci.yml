@@ -47,7 +47,7 @@ jobs:
         run: cat ~/.m2/settings.xml
 
       - name: Compile
-        run: mvn -B clean compile -Pdefault --file pom.xml
+        run: mvn -B clean compile -Pdefault --file pom.xml -X
 
       - name: Test
         run: mvn -B clean test -Pdefault --file pom.xml
